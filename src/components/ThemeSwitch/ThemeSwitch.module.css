@@ -1,0 +1,77 @@
+.theme_switch_container {
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+.theme_switch_label {
+    width: 65px;
+    height: 30px;
+    position: relative;
+    display: block;
+    background: #f0f0f0;
+    border-radius: 200px;
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.2),
+        inset 0px -4px 10px rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.theme_switch_label:after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: linear-gradient(180deg, #ffd54f, #ffb300);
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.theme_switch_input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.theme_switch_input:checked+.theme_switch_label {
+    background: #333333;
+}
+
+.theme_switch_input:checked+.theme_switch_label:after {
+    left: 62px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #9e9e9e, #616161);
+}
+
+.theme_switch_label:active:after {
+    width: 30px;
+}
+
+.theme_switch_label svg {
+    position: absolute;
+    width: 20px;
+    top: 5px;
+    z-index: 100;
+}
+
+.theme_switch_label svg.sun {
+    left: 5px;
+    fill: #ffffff;
+    transition: 0.3s;
+}
+
+.theme_switch_label svg.moon {
+    left: 40px;
+    fill: #757575;
+    transition: 0.3s;
+}
+
+.theme_switch_input:checked+.theme_switch_label svg.sun {
+    fill: #757575;
+}
+
+.theme_switch_input:checked+.theme_switch_label svg.moon {
+    fill: #ffffff;
+}

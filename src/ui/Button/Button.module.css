@@ -1,0 +1,22 @@
+.button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    background: var(--control-bg);
+    color: var(--control-text);
+    border: 1px solid var(--control-border);
+}
+
+.button:hover {
+    background: var(--control-bg-active);
+    border-color: var(--control-border-active);
+    color: var(--control-text-active);
+}
+
+.button.active {
+    background: var(--control-bg-active);
+    border-color: var(--control-border-active);
+    color: var(--control-text-active);
+    font-weight: 600;
+}
