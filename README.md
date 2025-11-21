@@ -13,8 +13,6 @@ Interactive line chart for visualizing A/B test statistics with multiple variati
 
 - **Theme switch** — light and dark mode with automatic detection of system theme
 
-- **Fully functional theme detection from the browser**
-
 - **Conversion rate calculation** for each variation: conversionRate = (conversions / visits) * 100
 
 - **All values are displayed as percentages**
