@@ -41,7 +41,6 @@ Interactive line chart for visualizing A/B test statistics with multiple variati
 Clone the repository:
 
 git clone <https://github.com/NorakHak/ab-test-chart>
-cd <ab-test-chart>
 
 Install dependencies:
 
@@ -51,4 +50,4 @@ Start the development server:
 
 npm start
 
-Open your browser at http://localhost:3000 to view the chart.
+Open your browser at http://localhost:3000.
