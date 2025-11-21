@@ -13,3 +13,7 @@ export interface ChartDataItem {
     date: string;
     [variationId: string]: number | string;
 }
+
+export type LineStyle = "line" | "smooth" | "area";
+
+export type WeekItem = ChartDataItem & { count: number }

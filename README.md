@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# A/B Test Conversion Rate Chart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive line chart for visualizing A/B test statistics with multiple variations and flexible view options.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📊 Visualization Library
 
-## React Compiler
+- **Library:** [Recharts](https://recharts.org/en-US/)  
+  Chosen for its responsiveness, composability, and ease of customizing chart elements like lines, areas, axes, tooltips, and legends.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## ✨ Implemented Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Theme switch** — light and dark mode with automatic detection of system theme
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Fully functional theme detection from the browser**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Conversion rate calculation** for each variation: conversionRate = (conversions / visits) * 100
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **All values are displayed as percentages**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Day / Week view toggle** — switch between daily and weekly aggregated data
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Variations selector** — show or hide lines dynamically, minimum one variation is always selected
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Line style selection** — Line, Smooth, or Area
+
+- **Brush / Zoom selection** — select a specific range of dates on the chart; the chart dynamically displays only the data within the selected range.
+
+- **Tooltip** — shows a vertical hover line and displays detailed daily/weekly data
+
+- **Responsive layout** — adapts to screen widths between 671px and 1300px
+
+- **Dynamic axes** — automatically adjusts X and Y axes according to visible data
+
+- **Export chart to PNG** — download chart image via html-to-image library
+
+
+## 🛠️ Local Setup
+
+Clone the repository:
+
+git clone <https://github.com/NorakHak/ab-test-chart>
+cd <ab-test-chart>
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm start
+
+Open your browser at http://localhost:3000 to view the chart.

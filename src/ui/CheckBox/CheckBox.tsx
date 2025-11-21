@@ -1,5 +1,3 @@
-import React from 'react'
-
 import styles from "./CheckBox.module.css"
 
 interface ChartCheckboxProps {
@@ -8,7 +6,7 @@ interface ChartCheckboxProps {
     onChange: (val: boolean) => void;
 }
 
-export function CheckBox({ checked, onChange, label }: ChartCheckboxProps) {
+export default function CheckBox({ checked, onChange, label }: ChartCheckboxProps) {
     return (
         <label className={styles.checkbox}>
             <input

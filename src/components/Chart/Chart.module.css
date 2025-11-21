@@ -12,16 +12,25 @@
     justify-content: space-between;
 }
 
-.actions_buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.actions_variations {
+.actions_buttons,
+.actions_variations,
+.actions_lineStyileOptions {
     display: flex;
     gap: 5px;
 }
 
+.actions_variations>span {
+    font-weight: 500;
+}
+
 .chart_container {
     flex: 1;
+}
+
+.bottom_actions {
+    width: 100%;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: end;
 }

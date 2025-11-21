@@ -31,17 +31,16 @@ img {
     /* Backgrounds */
     --bg-page: #f5f7fa;
     --bg-container: #ffffff;
-    --bg-chart: #ffffff;
-    --bg-tooltip: rgba(33, 33, 33, 0.85);
 
     --text-primary: #2e2e2e;
     --text-secondary: #555555;
-    --text-inverse: #ffffff;
 
     /* Lines / Charts */
     --line-variation-a: #4caf50;
     --line-variation-b: #2196f3;
-    --line-hover: #ff9800;
+    --line-variation-c: #ab47bc;
+    --line-variation-l: #ff9800;
+
 
     /* Borders */
     --border-light: #dcdcdc;
@@ -60,18 +59,16 @@ img {
     /* Backgrounds */
     --bg-page: #0f1115;
     --bg-container: #1e1e2a;
-    --bg-chart: #1b1b27;
-    --bg-tooltip: rgba(255, 255, 255, 0.9);
 
     /* Text */
     --text-primary: #e0e0e0;
     --text-secondary: #b0b0b0;
-    --text-inverse: #0f1115;
 
     /* Lines / Chart */
     --line-variation-a: #81c784;
     --line-variation-b: #64b5f6;
-    --line-hover: #ffb74d;
+    --line-variation-c: #9c27b0;
+    --line-variation-l: #ffb74d;
 
     /* Borders */
     --border-light: #2c2c2c;
